@@ -8,6 +8,8 @@ services:
       - database.env # configure postgres
     volumes:
       - ./db_data:/var/lib/postgresql/data
+    user:
+    	1000:1000
     ports:
       - "5432:5432"
     networks:
